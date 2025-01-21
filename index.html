@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Course Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step" data-title="Step 1"></div>
+            <div class="progress-step" data-title="Step 2"></div>
+            <div class="progress-step" data-title="Step 3"></div>
+            <div class="progress-step" data-title="Step 4"></div>
+            <div class="progress-step" data-title="Step 5"></div>
+        </div>
+
+        <form id="multi-step-form">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <h2>Step 1: Personal Information</h2>
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step">
+                <h2>Step 2: Contact Information</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone-number" placeholder="Phone Number" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step">
+                <h2>Step 3: Address</h2>
+                <input type="text" name="street-address" placeholder="Street Address" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="zip-code" placeholder="Zip Code" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step">
+                <h2>Step 4: Preferences</h2>
+                <select name="preference" required>
+                    <option value="">Select your preference</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="form-step">
+                <h2>Step 5: Confirmation</h2>
+                <p>Please review your information and confirm.</p>
+                <div id="review-info">
+                    <!-- Dynamically populated review information will go here -->
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
